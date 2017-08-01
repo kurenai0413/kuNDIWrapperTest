@@ -1,8 +1,10 @@
 package kuNDIWrapperTest;
 
+import java.lang.Thread;
 import java.awt.event.ActionEvent;
 
 import java.awt.event.ActionListener;
+import java.io.File;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -37,7 +39,7 @@ public class KuNDIWrapperTestDialog extends JDialog{
 		Button1.setBounds(20, 75, 85, 25);
 		getContentPane().add(Button1);
 		
-		ResultLabel.setBounds(20, 110, 200, 35);
+		ResultLabel.setBounds(20, 110, 450, 35);
 		ResultLabel.setText("Result: ");
 		getContentPane().add(ResultLabel);
 	}
@@ -52,8 +54,13 @@ public class KuNDIWrapperTestDialog extends JDialog{
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == Button1)
 			{
-				//ResultLabel.setText(Button1.getName() + " is clicked");
-				ResultLabel.setText("5+3 = " + kkWrapper.kuWrapperAddTest(5, 3) + ", " + kkWrapper.kuStartNDI() + ", " + kkWrapper.kuReturnCnt());
+				boolean isNDIStarted = kkWrapper.kuStartNDI();
+				ResultLabel.setText("Initial NDI: " + isNDIStarted);
+				
+				//ResultLabel.setText("ProtocolFlag: "  + kkWrapper.kuReturnProtocolFlag() + 
+				//					", PolarisFlag: " + kkWrapper.kuReturnPolarisFlag() +
+				//					", ToolsFlag: " + kkWrapper.kuReturnToolsFlag() +
+				//					", " + kkWrapper.kuReturnCnt());
 			}
 		}
 	}

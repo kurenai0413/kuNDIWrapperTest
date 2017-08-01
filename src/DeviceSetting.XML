@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Root>
+<DeviceSetting>
+<COM_Port>3</COM_Port>
+<Baud_Rate>38400</Baud_Rate>
+<Parity>ODD</Parity>
+<DEBUG_MODE>false</DEBUG_MODE>
+<ShowResult>false</ShowResult>
+</DeviceSetting>
+</Root>

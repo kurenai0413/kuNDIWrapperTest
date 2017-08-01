@@ -17,4 +17,13 @@ public class KuNDIWrapper {
 	public native int  	  kuWrapperAddTest(int a, int b);
 	public native boolean kuStartNDI();
 	public native int 	  kuReturnCnt();
+	public native boolean kuReturnProtocolFlag();
+	public native boolean kuReturnPolarisFlag();
+	public native boolean kuReturnToolsFlag();
+	public native boolean kuReturnXmlLoadFlag();
+	public native boolean kuReturnProtocolCheckFlag();
+	public native boolean kuReturnInitFlag();
+	public native boolean kuReturnStartFlag();
+	public native boolean kuReturnDataFailFlag();
+	public native boolean kuReturnLoadFailFlag();
 }
